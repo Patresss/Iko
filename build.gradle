@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'com.patres.iko'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation files('lib/processing/core/4.1.1/library/core.jar')
+    implementation files('lib/processing/video/2.2.1/library/gst1-java-core-1.4.0.jar')
+    implementation files('lib/processing/video/2.2.1/library/jna.jar')
+    implementation files('lib/processing/video/2.2.1/library/video.jar')
+
+//    compile files('lib/video/gstreamer-java.jar')
+//    implementation 'org.openpnp:opencv:4.5.5-0'
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
